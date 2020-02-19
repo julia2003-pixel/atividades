@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="row">
-        <h1> Pagina com links das minhas atividades" </h1>
+        <h1> Pagina com links das minhas atividades </h1>
     </div class>
 </body>
 </html>
