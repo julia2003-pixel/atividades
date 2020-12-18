@@ -1,8 +1,8 @@
 <?php
 include "conf.php";
-include "script.php";
-cabecalho();
 
+cabecalho();
+include "script.php";
 ?>
 <script>
     $(document).ready(function(){
@@ -14,11 +14,13 @@ echo'<fieldset>
     <legend>Reservas</legend>
     <br />
     <div id="msg"></div>
-    <br />
-    <select id="select">
-    <option label="Selecione seu nome" />
-    </select>
-    <div id="recebe">
+    <br />';
+    if(!isset($_SESSION["permissao"]) || $_SESSION["permissao"]!=3){
+        echo'<select id="select">
+        <option label="Selecione um nome" />
+        </select>';
+    }
+    echo'<div id="recebe">  
         <h2>Escolha seu cardapio</h2>
     </div>
 </fieldset>';
